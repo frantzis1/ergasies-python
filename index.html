@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ΟΙΚΟ Εφαρμογές – εξειδικευμένες λύσεις κουφωμάτων PVC και αλουμινίου με γερμανική τεχνολογία στην Κέρκυρα."
+    />
+    <title>ΟΙΚΟ Εφαρμογές</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Σύγχρονες λύσεις για το σπίτι</p>
+        <h1>ΟΙΚΟ Εφαρμογές</h1>
+        <p class="lead">
+          Ολοκληρωμένες εφαρμογές κουφωμάτων PVC και αλουμινίου με γερμανική
+          τεχνολογία, προσαρμοσμένες στα μέτρα του χώρου σας. Από τον
+          σχεδιασμό έως την εγκατάσταση, η ομάδα μας αναλαμβάνει κάθε στάδιο
+          με ακρίβεια και αξιοπιστία.
+        </p>
+        <div class="cta-group">
+          <a class="cta-primary" href="mailto:info@oikoefarmoges.gr"
+            >Ζητήστε Προσφορά</a
+          >
+          <a class="cta-secondary" href="tel:+302661051088">26610 51088</a>
+        </div>
+        <dl class="contact-list">
+          <div>
+            <dt>Διεύθυνση</dt>
+            <dd>Μακρή Γεωργία 45, 49100 Κέρκυρα</dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:info@oikoefarmoges.gr">info@oikoefarmoges.gr</a></dd>
+          </div>
+          <div>
+            <dt>Κινητό</dt>
+            <dd><a href="tel:+306946666256">6946 666 256</a></dd>
+          </div>
+        </dl>
+      </div>
+      <div class="hero-artwork" aria-hidden="true">
+        <div class="logo-orbit">
+          <span class="orbit-ring orbit-ring--outer"></span>
+          <span class="orbit-ring orbit-ring--inner"></span>
+          <div class="logo-bubble">
+            <img src="assets/logo.svg" alt="Λογότυπο ΟΙΚΟ Εφαρμογές" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="services">
+        <h2>Υπηρεσίες</h2>
+        <p class="section-intro">
+          Με εμπειρία στην ενεργειακή αναβάθμιση κατοικιών, προσφέρουμε
+          προϊόντα και υπηρεσίες που διασφαλίζουν άνεση, ασφάλεια και υψηλή
+          αισθητική.
+        </p>
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Συστήματα Κουφωμάτων</h3>
+            <p>
+              Μελέτη και τοποθέτηση κουφωμάτων που εξασφαλίζουν θερμομόνωση και
+              ηχομόνωση σύμφωνα με τις ανάγκες σας.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3>Κουφώματα PVC &amp; Αλουμινίου</h3>
+            <p>
+              Πιστοποιημένα γερμανικά συστήματα που προσφέρουν αντοχή και
+              μακροχρόνια αξιοπιστία.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3>Αυλόπορτες &amp; Γκαραζόπορτες</h3>
+            <p>
+              Λύσεις προσαρμοσμένες στα μέτρα του χώρου σας με έμφαση στην
+              ασφάλεια και την άνεση.
+            </p>
+          </article>
+          <article class="service-card">
+            <h3>Εσωτερικές Πόρτες</h3>
+            <p>
+              Ποικιλία σχεδίων και φινιρισμάτων για να ολοκληρώσετε την
+              αισθητική του εσωτερικού σας χώρου.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="promise">
+        <h2>Γιατί να μας επιλέξετε</h2>
+        <ul class="promise-list">
+          <li>
+            <strong>Πιστοποιημένη ποιότητα:</strong> Χρησιμοποιούμε αποκλειστικά
+            υλικά κορυφαίων ευρωπαϊκών οίκων.
+          </li>
+          <li>
+            <strong>Εξειδικευμένο συνεργείο:</strong> Η τοποθέτηση γίνεται από
+            τεχνικούς με πολυετή εμπειρία.
+          </li>
+          <li>
+            <strong>Υποστήριξη μετά την πώληση:</strong> Παραμένουμε δίπλα σας
+            για συντήρηση και αναβάθμιση.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> ΟΙΚΟ Εφαρμογές. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
