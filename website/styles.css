@@ -1,0 +1,239 @@
+:root {
+  --lime: #b8e48d;
+  --lime-deep: #9dce6c;
+  --blue: #8f96da;
+  --blue-deep: #6f76c8;
+  --slate: #16203b;
+  --bg: #f6f8ff;
+  --text: #1b2436;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --shadow: 0 25px 40px rgba(22, 32, 59, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(184, 228, 141, 0.25),
+    rgba(111, 118, 200, 0.28)
+  );
+  z-index: -2;
+}
+
+.blueprint-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+      to right,
+      rgba(29, 79, 145, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(29, 79, 145, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.6;
+}
+
+.hero {
+  padding: 4rem 1.5rem 2rem;
+  display: grid;
+  gap: 3rem;
+  justify-items: center;
+  text-align: center;
+}
+
+
+.logo-wrapper {
+  width: min(260px, 58vw);
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 8%;
+  filter: drop-shadow(0 24px 40px rgba(22, 32, 59, 0.22));
+}
+
+.logo-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(184, 228, 141, 0.2),
+    rgba(143, 150, 218, 0.28) 55%,
+    rgba(246, 248, 255, 0) 82%
+  );
+  filter: blur(18px);
+  z-index: -1;
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-arc,
+.logo-roof,
+.logo-window {
+  filter: drop-shadow(0 12px 22px rgba(22, 32, 59, 0.18));
+}
+
+.logo-window {
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 1.2;
+}
+
+.hero-content {
+  max-width: 720px;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.tagline {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  color: var(--blue);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
+  margin: 0;
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(120deg, var(--lime), var(--blue-deep));
+  color: #fff;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 15px 25px rgba(15, 27, 51, 0.18);
+}
+
+.cta:hover,
+.cta:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 35px rgba(15, 27, 51, 0.22);
+}
+
+main {
+  display: grid;
+  gap: 2.5rem;
+  padding: 0 1.5rem 4rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 32px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: var(--slate);
+}
+
+.card ul {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.card li::before {
+  content: "▸";
+  color: var(--lime);
+  margin-right: 0.75rem;
+}
+
+.card p {
+  line-height: 1.7;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact a {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.contact-buttons .cta {
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: rgba(28, 36, 49, 0.7);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: left;
+    padding: 6rem 4rem 3rem;
+  }
+
+  .hero-content {
+    justify-items: start;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 0 4rem 5rem;
+  }
+}
